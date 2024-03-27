@@ -54,7 +54,7 @@ public class EnemyAI : MonoBehaviour
                     SwitchState(0);
                 }
 
-                if (distanceToTarget <= 20)
+                if (distanceToTarget <= 15)
                 {
                     enemyState = EnemyState.Chase;
                 }
@@ -65,7 +65,7 @@ public class EnemyAI : MonoBehaviour
 
                 ai.SetDestination(target.position);
 
-                if (distanceToTarget <=20)
+                if (distanceToTarget <=5)
                 {
                     enemyState = EnemyState.Attack;
                 }
@@ -80,7 +80,7 @@ public class EnemyAI : MonoBehaviour
 
                 ai.SetDestination(target.position);
 
-                if (distanceToTarget > 20 && distanceToTarget <= 15)
+                if (distanceToTarget > 5 && distanceToTarget <= 15)
                 {
                     enemyState = EnemyState.Chase;
                 }
